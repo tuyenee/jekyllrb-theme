@@ -1,0 +1,115 @@
+$bg: #333;
+$bgLight: #444;
+$bgDarker: #2b2b2b;
+$bgDarkest: #212121;
+$textColor: #ddd;
+$textColorBright: #fff;
+$textHighlight: #fc0;
+$textHighlightHover: #f90;
+$fontSize: 21px;
+$fontWeight: 300;
+$footerFixHeight: 12em;
+
+html {
+    min-height: 100%;
+    position: relative;
+}
+body {
+    background-color: $bg;
+    font-family: Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: $fontSize;
+    font-weight: $fontWeight;
+    color: $textColor;
+    margin-bottom: $footerFixHeight;
+}
+footer {
+    background-color: $bgDarkest;
+    font-size: 16px;
+    padding: 15px 0 5px 0;
+    height: $footerFixHeight;
+    margin-top: 40px;
+    position: absolute;
+    bottom: 0;
+}
+h1 {
+    font-size: 1.75em;
+    line-height: 1em;
+    font-weight: 300;
+}
+a {
+    color: $textHighlight;
+}
+a:hover {
+    color: $textHighlightHover;
+    text-decoration: none;
+}
+article.post {
+    background-color: $bgLight;
+    padding: 20px 40px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+figure.highlight {
+    background-color: $bgDarker;
+    padding: 10px 1em;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 10px rgba(0,0,0,0.3), 0 1px 0 rgba(255,255,255,0.1), 0 -1px 0 rgba(0,0,0,0.5);
+    -webkit-box-shadow: inset 0 1px 10px rgba(0,0,0,0.3), 0 1px 0 rgba(255,255,255,0.1), 0 -1px 0 rgba(0,0,0,0.5);
+    font-size: 1em;
+}
+figure.highlight pre {
+    color: $textColor;
+    line-height: 1.8em;
+    margin-bottom: 0;
+}
+code.highlighter-rouge {
+    display: inline-block;
+    background-color: $bgDarker;
+    color: $textColorBright;
+    white-space: pre;
+    font-size: 16px;
+    padding: 0 0.5em;
+    line-height: 2em;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 10px rgba(0,0,0,0.3), 0 1px 0 rgba(255,255,255,0.1), 0 -1px 0 rgba(0,0,0,0.5);
+    -webkit-box-shadow: inset 0 1px 10px rgba(0,0,0,0.3), 0 1px 0 rgba(255,255,255,0.1), 0 -1px 0 rgba(0,0,0,0.5);
+}
+nav.bg-dark {
+    background-color: $bgDarker!important;
+}
+.navbar-dark .navbar-nav .nav-link {
+    font-size: 0.75em;
+    font-weight: 900;
+    text-transform: uppercase;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    color: $textHighlight;
+}
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: $textHighlightHover;
+}
+.navbar-dark .navbar-nav .active>.nav-link {
+    color: $bgDarker;
+    background-color: $textHighlight;
+}
+ul.post-list, ul.social-media-list {
+    list-style-type: none;
+}
+.svg-icon {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    fill: #828282;
+    margin-right: 5px;
+    vertical-align: text-top;
+}
+.post-meta {
+    font-size: 16px;
+    line-height: 16px;
+    color: #999;
+}
+@media (min-width: 569px) {
+    h1 {
+        font-size: 3.2em;
+    }
+}
