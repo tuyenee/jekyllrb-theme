@@ -20,13 +20,13 @@ body {
     font-size: $fontSize;
     font-weight: $fontWeight;
     color: $textColor;
-    margin-bottom: $footerFixHeight;
+    padding-bottom: $footerFixHeight;
 }
 footer {
     background-color: $bgDarkest;
     font-size: 16px;
     padding: 15px 0 5px 0;
-    height: $footerFixHeight;
+    min-height: $footerFixHeight;
     margin-top: 40px;
     position: absolute;
     bottom: 0;
