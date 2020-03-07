@@ -65,6 +65,14 @@ figure.highlight pre {
     line-height: 1.8em;
     margin-bottom: 0;
 }
+code, pre code {
+    white-space: pre;
+    display: inline-block;
+    margin: 0;
+    padding: 0 0.5em;
+    font-size: 14px;
+    font-family: Menlo, Consolas, "Courier New", Courier, "Liberation Mono", monospace;;
+}
 code.highlighter-rouge {
     display: inline-block;
     background-color: $bgDarker;
