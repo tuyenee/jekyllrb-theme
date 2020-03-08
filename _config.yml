@@ -29,11 +29,14 @@ url: "https://tuyenee.github.io" # the base hostname & protocol for your site, e
 show_excerpts: True
 twitter_username: tuyenese
 github_username:  tuyenee
+paginate: 2
+paginate_path: "/jekyllrb-theme/page:num/"
 
 # Build settings
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-paginate
 
 # Exclude from processing.
 # The following items will not be processed, by default.
