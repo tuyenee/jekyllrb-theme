@@ -291,6 +291,15 @@ ul.post-list, ul.social-media-list {
     line-height: 16px;
     color: #999;
 }
+// pagination
+.page-item.disabled .page-link, .page-link {
+    background-color: $bgLight;
+    color: $textColor;
+}
+.page-item.active .page-link {
+    background-color: $bg;
+    border-color: #dee2e6;
+}
 @media (min-width: 569px) {
     h1 {
         font-size: 3.2em;
