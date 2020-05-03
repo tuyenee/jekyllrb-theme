@@ -2,38 +2,52 @@
 layout: default
 ---
 <article class="post container pt-3 h-entry" itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="row mb-4">
-    <div class="col-sm-12">
-      <header class="post-header">
-        <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
-        <p class="post-meta">
-          <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-            {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-            {{ page.date | date: date_format }}
-          </time>
-          {%- if page.author -%}
-          • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
-          {%- endif -%}
-        </p>
-      </header>
-    </div>
-  </div>
-  
   <div class="row">
-    <div class="col-sm-12">
-      <div class="post-content e-content" itemprop="articleBody">
-        {{ content }}
+    <div id="content-body" class="col-xs-12 col-sm-12 col-md-10 col-lg-9">
+      <div class="row mb-4">
+        <div class="col-sm-12">
+          <header class="post-header">
+            <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
+            <p class="post-meta">
+              <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+                {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+                {{ page.date | date: date_format }}
+              </time>
+              {%- if page.author -%}
+              • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
+              {%- endif -%}
+            </p>
+          </header>
+        </div>
       </div>
+      
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="post-content e-content" itemprop="articleBody">
+            {{ content }}
+          </div>
+        </div>
+      </div>
+        
+      <div class="row">
+        <div class="col-sm-12">
+          {%- if site.disqus.shortname -%}
+          {%- include disqus_comments.html -%}
+          {%- endif -%}
+        </div>
+      </div>
+        
+      <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+    </div>
+    <div id="side-panel" class="col-md-2 col-lg-3 d-none d-md-block">
+      {% for category in site.categories %}
+        <h4 class="category">{{ category[0] }}</h4>
+        <ul>
+          {% for post in category[1] %}
+            <li><a href="{{ post.url | relative_url }}" class="{{ page.url == post.url ? 'active' : ''}}">{{ post.title }}</a></li>
+          {% endfor %}
+        </ul>
+      {% endfor %}
     </div>
   </div>
-    
-  <div class="row">
-    <div class="col-sm-12">
-      {%- if site.disqus.shortname -%}
-      {%- include disqus_comments.html -%}
-      {%- endif -%}
-    </div>
-  </div>
-    
-  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>

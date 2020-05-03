@@ -47,7 +47,6 @@ main.page-content {
     padding: 0 20px;
 }
 article.post {
-    background-color: $bgLight;
     padding: 20px 20px;
     margin-top: 10px;
     border-radius: 10px;
@@ -152,6 +151,12 @@ tbody td {
 }
 td {
     padding: .5em .75em;
+}
+#content-body {
+    background-color: $bgLight;
+    margin: 15px 0;
+    border-radius: 10px;
+    padding: 20px;
 }
 .navbar-dark .navbar-nav .nav-link {
     font-size: 0.75em;
@@ -300,6 +305,23 @@ ul.post-list, ul.social-media-list {
     background-color: $bg;
     border-color: #dee2e6;
 }
+#side-panel {
+    padding: 20px;
+}
+#side-panel h4 {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 0 0 10px 30px;
+    margin-left: -10px;
+    display: inline-block;
+    border-bottom: 1px solid #c00;
+}
+#side-panel li a {
+    font-size: 16px;
+}
+#side-panel li a.active {color: $textHighlightHover;}
+#side-panel li {list-style-type: none;}
 @media (min-width: 569px) {
     h1 {
         font-size: 3.2em;
@@ -308,8 +330,5 @@ ul.post-list, ul.social-media-list {
 @media (min-width: 768px) {
     article.post {
         padding: 20px 40px;
-    }
-    .note {
-        margin-left: -50px;
     }
 }
